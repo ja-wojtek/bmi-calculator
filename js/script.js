@@ -2,12 +2,11 @@ console.log('BMI Calculator');
 
 const legendArea = document.querySelector('.container-legend');
 const legendBtn = document.querySelector('.legendBtn');
-
-let inputWeight = document.getElementById('inputWeight').innerText;
-let inputHeight = document.getElementById('inputHeight').innerText;
-let bmi;
+const calculateBtn = document.querySelector('.calculateBtn');
+const resultBmi = document.querySelector('h3');
 
 let isLegend = false
+let bmi;
 
 function showHideLegend() {
   if (isLegend === true) {
@@ -21,10 +20,18 @@ function showHideLegend() {
   }
 }
 
+function calculateBmi() {
+  const inputWeight = document.getElementById('inputWeight').value;
+  const inputHeight = document.getElementById('inputHeight').value;
+  bmi = 10000 * (inputWeight) / (inputHeight * inputHeight);
+  bmi = Math.round((bmi + Number.EPSILON) * 100) / 100;
 
+  presentBmi();
+}
 
-bmi = 10000 * (inputWeight) / (inputHeight * inputHeight);
+function presentBmi() {
+  resultBmi.textContent = bmi;
+}
 
-console.log(bmi);
-
-legendBtn.addEventListener('click', showHideLegend)
+legendBtn.addEventListener('click', showHideLegend);
+calculateBtn.addEventListener('click', calculateBmi);
