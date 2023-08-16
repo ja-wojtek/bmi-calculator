@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Kalkulator BMI</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="inputs">
+      <h1>Kalkulator BMI</h1>
+      <form>
+        <fieldset>
+          <legend>Wprowadź swoje dane</legend>
+
+          <label for="weight">Waga</label>
+          <input type="text" id="inputWeight" name="weight" min="20" max="300" maxlength="3"
+            placeholder="Wprowadź swoją wagę w [kg]">
+
+          <label for="height">Wzrost</label>
+          <input type="text" id="inputHeight" name="height" min="50" max="250" maxlength="3"
+            placeholder="Wprowadź swój wzrost w [cm]">
+
+          <label for="age">Wiek</label>
+          <input type="text" id="inputAge" name="age" min="1" max="199" maxlength="3" placeholder="Wprowadź swój wiek">
+
+          <fieldset>
+            <legend>Wybierz płeć</legend>
+            <div>
+              <input type="radio" id="inputFemale" name="gender" value="female">
+              <label for="inputFemale">Kobieta</label>
+            </div>
+            <div>
+              <input type="radio" id="inputMale" name="gender" value="male">
+              <label for="inputMale">Mężczyzna</label>
+            </div>
+          </fieldset>
+          <button class="calculateBtn">Oblicz</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="result-area">
+      <h2>Wynik</h2>
+      <div class="result">
+        <div class="result-text">Twój wynik
+          <div class="result-score">
+            <h3>22.50</h3>
+          </div>
+        </div>
+        <div>
+          <button class="legendBtn">i</button>
+          <div class="container-legend">
+            <div class="result-legend">Wartości BMI
+              <table>
+                <tr>
+                  <th>BMI</th>
+                  <th>Stan</th>
+                </tr>
+                <tr>
+                  <td>0 - 16</td>
+                  <td>Wygłodzenie</td>
+                </tr>
+                <tr>
+                  <td>16,1 - 17</td>
+                  <td>Wychudenie</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>
