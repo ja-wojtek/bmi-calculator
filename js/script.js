@@ -4,6 +4,7 @@ const legendArea = document.querySelector('.container-legend');
 const legendBtn = document.querySelector('.legendBtn');
 const calculateBtn = document.querySelector('.calculateBtn');
 const resultBmi = document.querySelector('h3');
+const messageBox = document.querySelector('.message-box');
 
 let inputWeight;
 let inputHeight;
@@ -36,17 +37,22 @@ function calculateBmi() {
 
 function presentBmi() {
   resultBmi.textContent = bmi;
+  messageBox.value = "Obliczono BMI."
 }
 
 function inputWeightValidation() {
   if (isNumber(inputWeight) === true) {
     return true;
+  } else {
+    messageBox.value = "Wprowadź prawidłową wagę."
   }
 }
 
 function inputHeightValidation() {
   if (isNumber(inputHeight) === true) {
     return true;
+  } else {
+    messageBox.value = "Wprowadź prawidłowy wzrost."
   }
 }
 
