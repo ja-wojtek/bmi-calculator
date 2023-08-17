@@ -18,12 +18,11 @@
           <legend>Wprowadź swoje dane</legend>
 
           <label for="weight">Waga</label>
-          <input type="text" id="inputWeight" min="20" max="300" maxlength="3" placeholder="Wprowadź swoją wagę w [kg]"
-            value="99">
+          <input type="text" id="inputWeight" min="20" max="300" maxlength="3" placeholder="Wprowadź swoją wagę w [kg]">
 
           <label for="height">Wzrost</label>
-          <input type="text" id="inputHeight" min="50" max="250" maxlength="3" placeholder="Wprowadź swój wzrost w [cm]"
-            value="199">
+          <input type="text" id="inputHeight" min="50" max="250" maxlength="3"
+            placeholder="Wprowadź swój wzrost w [cm]">
 
           <label for=" age">Wiek</label>
           <input type="text" id="inputAge" min="1" max="199" maxlength="3" placeholder="Wprowadź swój wiek">
@@ -50,13 +49,14 @@
         <input type="text" disabled="disabled" class="message-box" value="Wprowadź dane by obliczyć BMI.">
       </div>
       <div class="result">
-        <div class="result-text">Twój wynik
+        <div class="result-text">Twój wynik:
           <div class="result-score">
-            <h3></h3>
+            <h3>...</h3>
           </div>
         </div>
+
+        <button class="legendBtn">?</button>
         <div>
-          <button class="legendBtn">i</button>
           <div class="container-legend">
             <div class="result-legend">Wartości BMI
               <table>
@@ -71,6 +71,30 @@
                 <tr>
                   <td>16,1 - 17</td>
                   <td>Wychudenie</td>
+                </tr>
+                <tr>
+                  <td>17,1 - 18,4</td>
+                  <td>Niedoawaga</td>
+                </tr>
+                <tr>
+                  <td>18,5 - 24,9</td>
+                  <td>Prawidłowa masa ciała</td>
+                </tr>
+                <tr>
+                  <td>25 - 29,9</td>
+                  <td>Nadwaga</td>
+                </tr>
+                <tr>
+                  <td>30 - 34,9</td>
+                  <td>Otyłość I stopnia</td>
+                </tr>
+                <tr>
+                  <td>35 - 39,9</td>
+                  <td>Otyłość II stopnia</td>
+                </tr>
+                <tr>
+                  <td>40 - 50</td>
+                  <td>Otyłość III stopnia</td>
                 </tr>
               </table>
             </div>

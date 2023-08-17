@@ -25,7 +25,6 @@ h2 {
 
 h3 {
   font-size: xx-large;
-  color: green;
 }
 
 p {
@@ -70,6 +69,8 @@ form fieldset {
 }
 
 input {
+  color: blue;
+  font-weight: bold;
   padding: 3px 1px 3px 15px;
   margin: 5px;
   border: 1px solid black;
@@ -99,6 +100,8 @@ input:focus {
 
 .result {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .result-text {
@@ -108,8 +111,9 @@ input:focus {
 }
 
 .result-score {
+  width: 50%;
   height: 80%;
-  min-height: 100px;
+  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,23 +127,36 @@ input:focus {
 }
 
 .container-legend {
-  position: absolute;
   display: none;
+  position: absolute;
   width: 350px;
   top: 60%;
-  margin-left: 55px;
+  margin-left: 10px;
+  animation-name: legend;
+  animation-duration: 1s;
 }
 
 .result-legend {
   position: absolute;
-  width: 200px;
-  width: 50%;
+  width: 250px;
   font-size: larger;
   padding: 5px;
-  background: rgba(150, 150, 150, 0.6);
+  background: rgba(150, 150, 150, 0.75);
   border: 1px dimgray solid;
   box-shadow: 10px 10px 10px gray;
   border-radius: 5px;
+}
+
+.result-orange {
+  color: orange;
+}
+
+.result-red {
+  color: red;
+}
+
+.result-green {
+  color: green;
 }
 
 table {
@@ -157,4 +174,14 @@ td {
   font-size: small;
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+@keyframes legend {
+  from {
+    margin-left: 25px;
+  }
+  to {
+    margin-left: 10px;
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
