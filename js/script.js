@@ -8,6 +8,7 @@ const messageBox = document.querySelector('.message-box');
 
 let inputWeight;
 let inputHeight;
+let inputAge;
 
 let isLegend = false
 let bmi;
@@ -27,8 +28,10 @@ function showHideLegend() {
 function calculateBmi() {
   inputWeight = document.getElementById('inputWeight').value;
   inputHeight = document.getElementById('inputHeight').value;
+  inputAge = document.getElementById('inputAge').value;
   if (inputWeightValidation() === true
-    && inputHeightValidation() === true) {
+    && inputHeightValidation() === true
+    && inputAgeValidation() === true) {
     bmi = 10000 * (inputWeight) / (inputHeight * inputHeight);
     bmi = Math.round((bmi + Number.EPSILON) * 100) / 100;
     presentBmi();
@@ -53,6 +56,14 @@ function inputHeightValidation() {
     return true;
   } else {
     messageBox.value = "Wprowadź prawidłowy wzrost."
+  }
+}
+
+function inputAgeValidation() {
+  if (isNumber(inputAge) === true) {
+    return true;
+  } else {
+    messageBox.value = "Wprowadź prawidłowy wiek."
   }
 }
 
