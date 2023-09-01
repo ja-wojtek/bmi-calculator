@@ -124,6 +124,7 @@ input:focus {
   height: 50px;
   border-radius: 2px solid gray;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .container-legend {
